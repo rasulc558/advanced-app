@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    // То куда будет сборка. В нашем случае это не важно, так как webpack собирает
+    "outDir": "./dist/",
+    // Подсвит тех мест где явно не указан тип
+    "noImplicitAny": true,
+    // Какая модульная система будет использоваться
+    "module": "ESNext",
+    // В какую спецификацию компилируем
+    "target": "es5",
+    // Даем понять компилятору что будем использовать jsx как в реакте
+    "jsx": "react",
+    // Компилято (TS) будет обрабатывать js вместе с ts
+    "allowJs": true,
+    // То какие импорты будут node/classic в 90% будет node
+    "moduleResolution": "node",
+    // Позволяет работать с пакетами, которые используют common js (requer() module.export) как с обычными пакетами с помощью import/export
+    "esModuleInterop": true,
+    // Если библиотека не имеет дефолтного импорта, то данная строка позволяет сделать его вместо того чтобы писать 'import * as React from...' можно написать 'import React from 'react'
+    "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}
