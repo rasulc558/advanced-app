@@ -17,7 +17,9 @@
     // Позволяет работать с пакетами, которые используют common js (requer() module.export) как с обычными пакетами с помощью import/export
     "esModuleInterop": true,
     // Если библиотека не имеет дефолтного импорта, то данная строка позволяет сделать его вместо того чтобы писать 'import * as React from...' можно написать 'import React from 'react'
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    // Для абсолютного импорта
+    "baseUrl": "."
   },
   "ts-node": {
     "compilerOptions": {
