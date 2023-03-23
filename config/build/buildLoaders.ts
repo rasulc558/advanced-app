@@ -2,13 +2,27 @@ import  webpack  from "webpack"
 
 export function buildLoaders(): webpack.RuleSetRule[]   {
 
+
+  // Если не используем typescript то необходимо установить babel-loader
   const typeScriptLoader = {
     test: /\.tsx?$/,
     use: "ts-loader",
     exclude: /node_modules/,
   }
 
+  const sassLoader = {
+    test: /\.s[ac]ss$/i,
+    use: [
+      // Creates `style` nodes from JS strings
+      "style-loader",
+      // Translates CSS into CommonJS
+      "css-loader",
+      // Compiles Sass to CSS
+      "sass-loader",
+    ],
+  }
+
   return [
-    typeScriptLoader
+    typeScriptLoader, sassLoader
   ]
 }
