@@ -28,7 +28,7 @@ export function buildWebpackConfig(options:BuildOptions): webpack.Configuration 
     // Ниже настройки TypeScript >>
     module: {
       // Тут указываем какие лоудеры и какие файлы(расширение файлов) обрабатывают и что исключают
-      rules: buildLoaders()
+      rules: buildLoaders(options)
     },
     resolve: buildResolves(),
     // подключаемые плагины, почти все нужно ставить через npm
