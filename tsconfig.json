@@ -20,8 +20,11 @@
     // Если библиотека не имеет дефолтного импорта, то данная строка позволяет сделать его вместо того чтобы писать 'import * as React from...' можно написать 'import React from 'react'
     "allowSyntheticDefaultImports": true,
     // Для абсолютного импорта
-    "baseUrl": "."
+    "baseUrl": ".",
+    // Говорим что абсолютные экспорты и импорты будут идти из
+    "paths": {"*":["./src/*"]}
   },
+  // Так как ts-node поддерживает только commonJs ипорты, то при использовании webpack.config.ts мы не можем использовать современные import/export поэтому ставим опцию:
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"

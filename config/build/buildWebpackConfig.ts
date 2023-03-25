@@ -30,7 +30,7 @@ export function buildWebpackConfig(options:BuildOptions): webpack.Configuration 
       // Тут указываем какие лоудеры и какие файлы(расширение файлов) обрабатывают и что исключают
       rules: buildLoaders(options)
     },
-    resolve: buildResolves(),
+    resolve: buildResolves(options),
     // подключаемые плагины, почти все нужно ставить через npm
     plugins: buildPlugins(options)
   };
