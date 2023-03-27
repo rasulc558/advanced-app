@@ -5,18 +5,18 @@ import { AppRouter } from "./provider/router";
 import "./styles/index.scss";
 import { NavBar } from "widgets/NavBar";
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
+import { SideBar } from "widgets/SideBar";
 
 const App = () => {
   const { theme } = useTheme();
 
   return (
     <div className={classNames("app", {}, [theme])}>
-      <ThemeSwitcher />
-      <hr />
       <NavBar />
-      <hr />
-
-      <AppRouter />
+      <div className="content-page">
+        <SideBar />
+        <AppRouter />
+      </div>
     </div>
   );
 };
