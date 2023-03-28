@@ -17,3 +17,5 @@ declare module "*.svg" {
   const SVG: React.FC<React.SVGProps<SVGSVGElement>>;
   export default SVG;
 }
+// Эта констатна будет прокинута вебпаком в само приложение
+declare const __IS_DEV__:boolean 

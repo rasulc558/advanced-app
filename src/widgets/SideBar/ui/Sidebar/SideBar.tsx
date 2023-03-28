@@ -1,5 +1,6 @@
 import React from "react";
 import { classNames } from "shared/lib/classNames";
+import { LangSwitcher } from "shared/ui/LangSwitcher/LangSwitcher";
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher";
 import cls from "./SideBar.module.scss";
 
@@ -24,7 +25,7 @@ export const SideBar = ({ className }: SideBarProps) => {
       <div className={cls.switchers}>
         <ThemeSwitcher />
 
-        {/* переключатель языков */}
+        <LangSwitcher className={cls.lang} />
       </div>
     </div>
   );
