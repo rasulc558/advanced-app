@@ -22,7 +22,20 @@
     // Для абсолютного импорта
     "baseUrl": ".",
     // Говорим что абсолютные экспорты и импорты будут идти из
-    "paths": {"*":["./src/*"]}
+    "paths": {
+      "*": [
+        "./src/*"
+      ]
+    },
+    // Cкопировал отсюда https://habr.com/ru/post/557738/
+    // "alwaysStrict": true,
+    // "noImplicitAny": true,
+    // Данная опция не позволит передвать и импортировать данные с типом null,  undefined,
+    // "strictNullChecks": true,
+    // "strictPropertyInitialization": true,
+    // "strictFunctionTypes": true,
+    // "noImplicitThis": true,
+    // "strictBindCallApply": true,
   },
   // Так как ts-node поддерживает только commonJs ипорты, то при использовании webpack.config.ts мы не можем использовать современные import/export поэтому ставим опцию:
   "ts-node": {

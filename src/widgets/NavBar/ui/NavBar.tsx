@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
-import { classNames } from "shared/lib/classNames";
-import { AppLink, AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import cls from "./NavBar.module.scss";
+import { classNames } from 'shared/lib/classNames';
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
+import cls from './NavBar.module.scss';
 
 interface NavBarProps {
   className?: string;
@@ -16,7 +15,6 @@ export const NavBar = ({ className }: NavBarProps) => {
         </AppLink>
 
         <AppLink theme={AppLinkTheme.RED} to="/about">
-          {" "}
           About Page
         </AppLink>
       </div>

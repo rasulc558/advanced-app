@@ -1,7 +1,7 @@
 import { BuildOptions } from './types/config';
-import type {Configuration} from 'webpack-dev-server'
+import type { Configuration } from 'webpack-dev-server'
 
-export function buildDevServer(options: BuildOptions):Configuration {
+export function buildDevServer (options: BuildOptions): Configuration {
   return {
     port: options.port,
     open: true,
@@ -10,5 +10,4 @@ export function buildDevServer(options: BuildOptions):Configuration {
     // Позволит испольозать Hot module replacement
     hot: true
   }
-
 }
