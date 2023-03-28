@@ -5,7 +5,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'standard-with-typescript'
+    'standard-with-typescript',
+    'plugin:i18next/recommended'
   ],
   overrides: [
     {
@@ -26,7 +27,8 @@ module.exports = {
   },
   plugins: [
     'react',
-    '@typescript-eslint'
+    '@typescript-eslint',
+    'i18next'
   ],
   rules: {
     // Отступы. Тип предупреждения "ошибка". Количество отступов 2
@@ -68,7 +70,8 @@ module.exports = {
     // Чтобы не ругался на комменты ts-ignore
     '@typescript-eslint/ban-ts-comment': 'off',
     // Требует точно указывать значения переменных и дефолтных параметров, чтобы избежать null , undefined
-    '@typescript-eslint/prefer-nullish-coalescing': 'off'
+    '@typescript-eslint/prefer-nullish-coalescing': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }]
   },
   globals: {
     // Чтобы не ругался на глобальные переменные
