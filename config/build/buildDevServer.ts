@@ -6,7 +6,9 @@ export function buildDevServer(options: BuildOptions):Configuration {
     port: options.port,
     open: true,
     // чтобы проксировать через основную страницу ( иначе дает ошибку 'cannot get ...')
-    historyApiFallback: true
+    historyApiFallback: true,
+    // Позволит испольозать Hot module replacement
+    hot: true
   }
 
 }
