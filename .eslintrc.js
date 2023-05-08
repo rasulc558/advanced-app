@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest: true
   },
   extends: [
     'plugin:react/recommended',
@@ -71,7 +72,8 @@ module.exports = {
     '@typescript-eslint/ban-ts-comment': 'off',
     // Требует точно указывать значения переменных и дефолтных параметров, чтобы избежать null , undefined
     '@typescript-eslint/prefer-nullish-coalescing': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }]
+    // Настроки для i18 чтобы не ругался на атрибуты
+    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to'] }]
   },
   globals: {
     // Чтобы не ругался на глобальные переменные
